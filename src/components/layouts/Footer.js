@@ -13,7 +13,7 @@ function Footer() {
             <div className="col-sm-3">
               <div className="address">
                 <img
-                  src="frontend/images/home/map.png"
+                  src="http://127.0.0.1:8000/frontend/images/home/map.png"
                   alt="Address map"
                 />
                 <p>505 S Atlantic Ave, Virginia Beach, VA</p>

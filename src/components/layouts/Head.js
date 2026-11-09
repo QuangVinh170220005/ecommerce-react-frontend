@@ -35,7 +35,7 @@ function Head() {
 				<div className="row">
 					<div className="col-md-4 clearfix">
 						<div className="logo pull-left">
-							<a href="/"><img src="frontend/images/home/logo.png" alt="" /></a>
+							<a href="/"><img src="http://127.0.0.1:8000/frontend/images/home/logo.png" alt="" /></a>
 						</div>
 						<div className="btn-group pull-right clearfix">
 							<div className="btn-group">
