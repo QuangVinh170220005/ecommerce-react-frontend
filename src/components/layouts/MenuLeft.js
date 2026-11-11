@@ -136,7 +136,7 @@ function MenuLeft() {
 			</div>{/* /price-range */}
 			
 			<div className="shipping text-center">
-				<img src={`${process.env.PUBLIC_URL}/frontend/images/home/shipping.jpg`} alt="" />
+				<img src="/user/images/home/shipping.jpg" alt="" />
 			</div>
 		
 		</div>

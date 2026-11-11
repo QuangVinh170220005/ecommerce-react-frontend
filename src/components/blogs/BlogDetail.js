@@ -1,12 +1,14 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
+import CommentList from "./CommentList"
+import API_URL from "./../../config"
 
 function BlogDetail(props){
     const {id} = useParams()
     const [blogDetail, setBlogDetail] = useState([])
     useEffect(() =>{
-        axios.get(`http://127.0.0.1:8000/api/blog/detail/${id}`)
+        axios.get(`${API_URL}/api/blog/detail/${id}`)
         .then((res) =>{
             setBlogDetail(res.data.blog)
         })
@@ -29,7 +31,7 @@ function BlogDetail(props){
                         <ul>
                             <li><i className="fa fa-user"></i> Mac Doe</li>
                             <li><i className="fa fa-clock-o"></i> 1:33 pm</li>
-                            <li><i className="fa fa-calendar"></i> {new Date(blogDetail.created_at).toLocaleDateString("en-US", { month: "short", day: "2-digit", year: "numeric" })}</li>
+                            <li><i className="fa fa-calendar"></i> {blogDetail.created_at}</li>
                         </ul>
 
                         <span>
@@ -42,12 +44,12 @@ function BlogDetail(props){
                     </div>
 
                     <Link to="#">
-                        <img src={`http://127.0.0.1:8000/admin/assets/images/blogs/${blogDetail.image}`} alt={blogDetail.title}/>
+                        <img src={`${API_URL}/admin/assets/images/blogs/${blogDetail.image}`} alt={blogDetail.title}/>
                     </Link>
 
                     <p>{blogDetail.description}</p>
 
-                    <div dangerouslySetInnerHTML={{ __html: blogDetail.content }}></div>
+                    {/* <div dangerouslySetInnerHTML={{ __html: blogDetail.content }}></div> */}
 
                     <div className="pager-area">
                         <ul className="pager pull-right">
@@ -84,12 +86,12 @@ function BlogDetail(props){
             </div>
 
             <div className="socials-share">
-                <Link to="#"><img src="/images/blog/socials.png" alt="Socials" /></Link>
+                <Link to="#"><img src="/user/images/blog/socials.png" alt="Socials" /></Link>
             </div>
 
             <div className="media commnets">
                 <Link className="pull-left" to="#">
-                    <img className="media-object" src="/images/blog/man-one.jpg" alt="User" />
+                    <img className="media-object" src="/user/images/blog/man-one.jpg" alt="User" />
                 </Link>
 
                 <div className="media-body">
@@ -111,73 +113,7 @@ function BlogDetail(props){
                     </div>
                 </div>
             </div>
-
-            <div className="response-area">
-                <h2>3 RESPONSES</h2>
-
-                <ul className="media-list">
-                    <li className="media">
-                        <Link className="pull-left" to="#">
-                            <img className="media-object" src="/images/blog/man-one.jpg" alt="User" style={{ width: "50px", height: "50px", borderRadius: "50%", objectFit: "cover" }} />
-                        </Link>
-
-                        <div className="media-body">
-                            <ul className="sinlge-post-meta">
-                                <li><i className="fa fa-user"></i> John Doe</li>
-                                <li><i className="fa fa-clock-o"></i> 1:33 pm</li>
-                                <li><i className="fa fa-calendar"></i> Nov 03, 2026</li>
-                            </ul>
-
-                            <p>This is a sample comment.</p>
-
-                            <button type="button" className="btn btn-primary reply">
-                                <i className="fa fa-reply"></i> Reply
-                            </button>
-
-                            <div className="reply-form" style={{ marginTop: "15px" }}>
-                                <textarea rows="3" className="form-control reply_message" placeholder="Write a reply..."></textarea>
-                                <button className="btn btn-primary btn-sm post-reply" style={{ marginTop: "5px" }}>Submit Reply</button>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li className="media second-media">
-                        <Link className="pull-left" to="#">
-                            <img className="media-object" src="/images/blog/man-one.jpg" alt="User" style={{ width: "50px", height: "50px", borderRadius: "50%", objectFit: "cover" }} />
-                        </Link>
-
-                        <div className="media-body">
-                            <ul className="sinlge-post-meta">
-                                <li><i className="fa fa-user"></i> Jane Doe</li>
-                                <li><i className="fa fa-clock-o"></i> 1:40 pm</li>
-                                <li><i className="fa fa-calendar"></i> Nov 03, 2026</li>
-                            </ul>
-
-                            <p>This is a sample reply.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div className="replay-box">
-                <div className="row">
-                    <div className="col-sm-12">
-                        <h2>Leave a replay</h2>
-
-                        <div className="text-area">
-                            <div className="blank-arrow">
-                                <label>Your Name</label>
-                            </div>
-
-                            <span>*</span>
-
-                            <textarea name="cmt" rows="11" className="comment_message"></textarea>
-
-                            <button className="btn post">Post Comment</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <CommentList blogId={id} />
         </div>
     )
 }
