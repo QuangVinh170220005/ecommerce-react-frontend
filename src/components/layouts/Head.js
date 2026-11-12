@@ -10,19 +10,19 @@ function Head() {
 					<div className="col-sm-6">
 						<div className="contactinfo">
 							<ul className="nav nav-pills">
-								<li><a href="#"><i className="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i className="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href="d#"><i className="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								<li><a href="#d"><i className="fa fa-envelope"></i> info@domain.com</a></li>
 							</ul>
 						</div>
 					</div>
 					<div className="col-sm-6">
 						<div className="social-icons pull-right">
 							<ul className="nav navbar-nav">
-								<li><a href=""><i className="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i className="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i className="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+								<li><a href="d"><i className="fa fa-facebook"></i></a></li>
+								<li><a href="d#"><i className="fa fa-twitter"></i></a></li>
+								<li><a href="#d"><i className="fa fa-linkedin"></i></a></li>
+								<li><a href="#d"><i className="fa fa-dribbble"></i></a></li>
+								<li><a href="#d"><i className="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -44,8 +44,8 @@ function Head() {
 									<span className="caret"></span>
 								</button>
 								<ul className="dropdown-menu">
-									<li><a href="">Canada</a></li>
-									<li><a href="">UK</a></li>
+									<li><a href="dd">Canada</a></li>
+									<li><a href="đ">UK</a></li>
 								</ul>
 							</div>
 							
@@ -55,8 +55,8 @@ function Head() {
 									<span className="caret"></span>
 								</button>
 								<ul className="dropdown-menu">
-									<li><a href="">Canadian Dollar</a></li>
-									<li><a href="">Pound</a></li>
+									<li><a href="đ">Canadian Dollar</a></li>
+									<li><a href="đ">Pound</a></li>
 								</ul>
 							</div>
 						</div>
@@ -65,7 +65,7 @@ function Head() {
 						<div className="shop-menu clearfix pull-right">
 							<ul className="nav navbar-nav">
 								<li><Link to="/account"><i className="fa fa-user"></i> Account</Link></li>
-								<li><a href=""><i className="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="đ"><i className="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><Link to="/login"><i className="fa fa-lock"></i>Login</Link></li>
@@ -91,7 +91,7 @@ function Head() {
 						<div className="mainmenu pull-left">
 							<ul className="nav navbar-nav collapse navbar-collapse">
 								<li><Link to="/">Home</Link></li>
-								<li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
+								<li className="dropdown"><a href="#đ">Shop<i className="fa fa-angle-down"></i></a>
                                     <ul role="menu" className="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
 										<li><a href="product-details.html">Product Details</a></li> 
@@ -100,7 +100,7 @@ function Head() {
 										<li><a href="login.html">Login</a></li> 
                                     </ul>
                                 </li> 
-								<li className="dropdown"><a href="">Blog<i className="fa fa-angle-down"></i></a>
+								<li className="dropdown"><a href="đ">Blog<i className="fa fa-angle-down"></i></a>
                                     <ul role="menu" className="sub-menu">
                                         <li><a href="blog.html">Blog List</a></li>
 										<li><a href="blog-single.html">Blog Single</a></li>

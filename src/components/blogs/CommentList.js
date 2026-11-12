@@ -28,8 +28,8 @@ function CommentList(props) {
   }
   function handlePostComment() {
     const token = localStorage.getItem("token");
-    const useData = JSON.parse(localStorage.getItem("Auth"));
-    const url = `${API_URL}/api/blog/comment/add`;
+    const useData = JSON.parse(localStorage.getItem("Auth"))
+    const url = `${API_URL}/api/blog/comment/add`
 
     if (!token) {
       alert("Vui lòng đăng nhập để bình luận");
@@ -45,7 +45,7 @@ function CommentList(props) {
         Authorization: "Bearer " + token,
         Accept: "application/json",
       },
-    };
+    }
 
     if (comment) {
       const formData = new FormData();
