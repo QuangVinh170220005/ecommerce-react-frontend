@@ -1,3 +1,5 @@
+import API_URL from "../../config";
+
 function Footer() {
   return (
     <footer id="footer">
@@ -13,7 +15,7 @@ function Footer() {
             <div className="col-sm-3">
               <div className="address">
                 <img
-                  src="http://127.0.0.1:8000/frontend/images/home/map.png"
+                  src={`${API_URL}/user/images/home/map.png`}
                   alt="Address map"
                 />
                 <p>505 S Atlantic Ave, Virginia Beach, VA</p>
